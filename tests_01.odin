@@ -48,3 +48,10 @@ smallest_number_01 :: proc(n: int) -> int {
 
     return next_pow - 1
 }
+
+// another efficient solution
+// Average Time in Debug Build:      132 ns
+// Average Time in Optimized Build:  21 ns
+smallest_number_02 :: proc(n: int) -> int {
+    return (1 << u64(p_int.bit_length(n))) - 1
+}
