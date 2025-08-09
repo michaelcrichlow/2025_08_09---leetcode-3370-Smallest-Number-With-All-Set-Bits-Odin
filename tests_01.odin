@@ -42,7 +42,7 @@ smallest_number_01 :: proc(n: int) -> int {
 
     // Find next power of 2
     next_pow := 1
-    for (next_pow < n) {
+    for (next_pow <= n) {
         next_pow <<= 1
     }
 
